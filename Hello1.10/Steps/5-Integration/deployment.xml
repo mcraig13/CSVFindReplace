@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="Windows-1252" standalone="no"?>
+<deployment xmlns="http://www.ecoa.technology/deployment-1.0" finalAssembly="cmp_HelloSystem" logicalSystem="HelloSystem">
+
+  <protectionDomain name="C">
+
+    <executeOn computingPlatform="C_Platform" computingNode="C_Computer"/>
+
+    <deployedModuleInstance componentName="ClientComponent" moduleInstanceName="HCFuncInst" modulePriority="3"/>
+    <deployedModuleInstance componentName="ClientComponent" moduleInstanceName="HCSupInst" modulePriority="2"/>
+    <deployedTriggerInstance triggerPriority="2" componentName="ClientComponent" triggerInstanceName="HCFuncTrigger"/> 
+
+  </protectionDomain>
+  <protectionDomain name="S">
+
+    <executeOn computingPlatform="S_Platform" computingNode="S_Computer"/>
+
+    <deployedModuleInstance componentName="ServerComponent" moduleInstanceName="HSFuncInst" modulePriority="3"/>
+    <deployedModuleInstance componentName="ServerComponent" moduleInstanceName="HSSupInst" modulePriority="2"/>
+
+  </protectionDomain>
+  
+  
+
+</deployment>

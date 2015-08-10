@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ecos:logicalSystem xmlns:ecos="http://www.ecoa.technology/logicalsystem-1.0" id="HelloSystem">
+
+  <logicalComputingPlatform id="C">
+
+    <logicalComputingNode id="C_Computer">
+
+      <endianess type="LITTLE" />
+      <logicalProcessors number="2" type="x86_64">
+        <stepDuration nanoSeconds="1020" />
+      </logicalProcessors>
+      <os name="linux" />
+      <availableMemory gigaBytes="2" />
+      <moduleSwitchTime microSeconds="10" />
+
+    </logicalComputingNode>
+
+  </logicalComputingPlatform>
+  
+    <logicalComputingPlatform id="S">
+
+    <logicalComputingNode id="S_Computer">
+
+      <endianess type="LITTLE" />
+      <logicalProcessors number="2" type="x86_64">
+        <stepDuration nanoSeconds="1020" />
+      </logicalProcessors>
+      <os name="linux" />
+      <availableMemory gigaBytes="2" />
+      <moduleSwitchTime microSeconds="10" />
+
+    </logicalComputingNode>
+
+  </logicalComputingPlatform>
+
+
+  
+</ecos:logicalSystem>

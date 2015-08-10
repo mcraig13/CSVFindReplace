@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.ecoa.technology/types-1.0">
+
+	<types>
+		<fixedArray itemType="char8" maxNumber="16" name="FixedArray_String_Type" /> 
+		<array itemType="char8" maxNumber="16" name="Array_String_Type" /> 
+
+				
+	</types>
+
+</library>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.ecoa.technology/types-1.0">
+
+	<types>
+	
+		<!-- ECOA.Lifecycle:component_states_type -->
+		<enum name="component_states_type" type="int32">
+			<value name="IDLE" /> <!-- default value -->
+			<value name="INITIALIZING" /> <!-- transient state -->
+			<value name="STOPPED" />
+			<value name="STOPPING" />     <!-- transient state -->
+			<value name="RUNNING" />
+			<value name="STARTING" />     <!-- transient state -->
+			<value name="FINISHING" />    <!-- transient state -->
+			<value name="FAILURE" />
+		</enum>
+
+		<!-- ECOA.Lifecycle:module_states_type -->
+		<enum name="module_states_type" type="int32">
+			<value name="IDLE" />        <!-- default value -->
+			<value name="READY" />
+			<value name="RUNNING" />
+		</enum>
+				
+	</types>
+
+</library>

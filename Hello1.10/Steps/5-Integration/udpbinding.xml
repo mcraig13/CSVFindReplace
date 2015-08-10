@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecos:UDPBinding
+
+  xmlns:ecos="http://www.ecoa.technology/udpbinding-1.0">
+<!--  192.168.0.76.  See  ./C/src-gen/posix_apos_binding.c -->
+  <ecos:platform name="C"  receivingMulticastAddress="127.0.0.1" receivingPort="60426" platformId="1"/>
+  <ecos:platform name="S"    receivingMulticastAddress="127.0.0.1" receivingPort="60427" platformId="2"/>
+ 
+</ecos:UDPBinding>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<componentImplementation xmlns="http://www.ecoa.technology/implementation-1.0" componentDefinition="HelloClient" >
+  <use library="Local" ></use>
+  <moduleType name="HCSupType" isSupervisionModule="true">
+  	<operations>
+  	</operations>
+  </moduleType>
+  <moduleType name="HCFuncType" >
+  	<operations>
+  	   <eventSent name="doprod">
+  	   	<input name="tell" type="Local:FixedArray_String_Type"/>
+  	   </eventSent>
+  	   <eventReceived name="getchirp">
+  	   	<input name="tweet" type="Local:Array_String_Type"/>
+  	   </eventReceived>
+  	   <requestSent name="callHelloFunction" isSynchronous="true">
+	  	   <input name="val" type="ECOA:int32"/>
+	  	   <output name="result" type="ECOA:int32"/>
+  	   </requestSent>
+  	   <eventReceived name="trigger"></eventReceived>
+  	</operations>
+  </moduleType>
+  
+  <moduleImplementation name="HCSup" moduleType="HCSupType" language="C"/>
+  <moduleImplementation name="HCFunc" moduleType="HCFuncType" language="C"/>
+  
+  <moduleInstance name="HCSupInst" moduleDeadline="1e-3" implementationName="HCSup">
+  </moduleInstance>
+  <moduleInstance name="HCFuncInst" moduleDeadline="1e-3" implementationName="HCFunc">
+  </moduleInstance>
+  
+  <triggerInstance name="HCFuncTrigger" moduleDeadline="0"/>
+  
+  <eventLink>
+   <senders> 
+   		<moduleInstance operationName="doprod" instanceName="HCFuncInst"/>
+   </senders>
+   <receivers>
+   		<reference operationName="prod" instanceName="ref_Hello"/>
+   </receivers>
+  </eventLink>  
+  <eventLink>
+   <senders> 
+   		<reference operationName="chirp" instanceName="ref_Hello"/>
+   </senders>
+   <receivers>
+   		<moduleInstance operationName="getchirp" instanceName="HCFuncInst"/>
+   </receivers>
+  </eventLink> 
+  <requestLink>
+	  <clients>
+	  	 <moduleInstance operationName="callHelloFunction" instanceName="HCFuncInst"/>
+	  </clients>
+	  <server>
+	  	<reference operationName="helloFunction" instanceName="ref_Hello"/>
+	  </server>
+  </requestLink>
+  <eventLink>	  
+      <senders>
+         <trigger instanceName="HCFuncTrigger" period="0.2"/>
+      </senders>
+	  <receivers>
+	  	 <moduleInstance operationName="trigger" instanceName="HCFuncInst"/>
+	  </receivers>
+  </eventLink>
+  
+</componentImplementation>
+

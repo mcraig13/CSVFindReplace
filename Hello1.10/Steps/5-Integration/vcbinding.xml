@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecos:VCBinding xmlns:ecos="http://www.ecoa.technology/vcbinding-1.0">
+
+  <logicalComputingPlatform platformID="1" platformName="Core_Platform" receivingVCID="1">
+    <destinationPlatform/>
+  </logicalComputingPlatform>
+  
+  <logicalComputingPlatform platformID="2" platformName="WS_Platform" receivingVCID="2">
+    <destinationPlatform/>
+  </logicalComputingPlatform>
+
+  <logicalComputingPlatform platformID="3" platformName="WM_Platform" receivingVCID="3">
+    <destinationPlatform/>
+  </logicalComputingPlatform>
+
+  <logicalComputingPlatform platformID="4" platformName="SM1_Platform" receivingVCID="4">
+    <destinationPlatform/>
+  </logicalComputingPlatform>
+
+  <logicalComputingPlatform platformID="5" platformName="SM2_Platform" receivingVCID="5">
+    <destinationPlatform/>
+  </logicalComputingPlatform>
+
+  <logicalComputingPlatform platformID="6" platformName="SM3_Platform" receivingVCID="6">
+    <destinationPlatform/>
+  </logicalComputingPlatform>
+
+  <logicalComputingPlatform platformID="7" platformName="SI1_Platform" receivingVCID="7">
+    <destinationPlatform/>
+  </logicalComputingPlatform>
+
+  <logicalComputingPlatform platformID="8" platformName="SI2_Platform" receivingVCID="8">
+    <destinationPlatform/>
+  </logicalComputingPlatform>
+
+  <logicalComputingPlatform platformID="9" platformName="SI3_Platform" receivingVCID="9">
+    <destinationPlatform/>
+  </logicalComputingPlatform>
+
+  <logicalComputingPlatform platformID="10" platformName="EDVRS_Platform" receivingVCID="10">
+    <destinationPlatform/>
+  </logicalComputingPlatform>
+
+</ecos:VCBinding>

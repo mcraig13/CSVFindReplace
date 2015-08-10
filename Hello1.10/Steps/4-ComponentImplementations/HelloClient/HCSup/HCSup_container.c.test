@@ -1,0 +1,126 @@
+/* File HCSup_container.c */
+
+#include "HCSup_container.h"
+
+/* Logging and fault management services API */
+void HCSup_container__log_trace
+   (HCSup__context* context, const ECOA__log log)
+{
+}
+
+void HCSup_container__log_debug
+   (HCSup__context* context, const ECOA__log log)
+{
+}
+
+void HCSup_container__log_info
+   (HCSup__context* context, const ECOA__log log)
+{
+}
+
+void HCSup_container__log_warning
+   (HCSup__context* context, const ECOA__log log)
+{
+}
+
+void HCSup_container__raise_error
+   (HCSup__context* context, const ECOA__log log)
+{
+}
+
+void HCSup_container__raise_fatal_error
+   (HCSup__context* context, const ECOA__log log)
+{
+}
+
+/* Time services API */
+ECOA__error HCSup_container__get_relative_local_time
+   (HCSup__context* context, ECOA__hr_time* relative_local_time)
+{
+}
+
+ECOA__error HCSup_container__get_UTC_time
+   (HCSup__context* context, ECOA__global_time* utc_time)
+{
+}
+
+ECOA__error HCSup_container__get_absolute_system_time
+   (HCSup__context* context, ECOA__global_time* absolute_system_time)
+{
+}
+
+/* Time resolution services API */
+/*void HCSup_container__get_relative_local_time_resolution
+   (HCSup__context* context, ECOA__duration* relative_local_time_resolution)
+{
+}*/
+
+/*void HCSup_container__get_UTC_time_resolution
+   (HCSup__context* context, ECOA__duration* utc_time_resolution)
+{
+}*/
+
+/*void HCSup_container__get_absolute_system_time_resolution
+   (HCSup__context* context, ECOA__duration* absolute_system_time_resolution)
+{
+}*/
+
+ECOA__error HCSup_container__get_service_availability
+   (HCSup__context* context,
+    HCSup_container__reference_id instance,
+    ECOA__boolean8 *available)
+{
+}
+
+void HCSup_container__get_lifecycle_state__HCFuncInst
+   (HCSup__context* context,
+    ECOA__module_states_type* current_state)
+{
+}
+
+ECOA__error HCSup_container__STOP__HCFuncInst
+   (HCSup__context* context)
+{
+}
+
+ECOA__error HCSup_container__START__HCFuncInst
+   (HCSup__context* context)
+{
+}
+
+ECOA__error HCSup_container__INITIALIZE__HCFuncInst
+   (HCSup__context* context)
+{
+}
+
+ECOA__error HCSup_container__SHUTDOWN__HCFuncInst
+   (HCSup__context* context)
+{
+}
+
+void HCSup_container__get_lifecycle_state__HCFuncTrigger
+   (HCSup__context* context,
+    ECOA__module_states_type* current_state)
+{
+}
+
+ECOA__error HCSup_container__STOP__HCFuncTrigger
+   (HCSup__context* context)
+{
+}
+
+ECOA__error HCSup_container__START__HCFuncTrigger
+   (HCSup__context* context)
+{
+}
+
+ECOA__error HCSup_container__INITIALIZE__HCFuncTrigger
+   (HCSup__context* context)
+{
+}
+
+ECOA__error HCSup_container__SHUTDOWN__HCFuncTrigger
+   (HCSup__context* context)
+{
+}
+

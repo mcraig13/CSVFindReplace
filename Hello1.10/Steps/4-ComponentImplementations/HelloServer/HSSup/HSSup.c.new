@@ -1,0 +1,50 @@
+/* File HSSup.c */
+
+#include "HSSup.h"
+
+/* Runtime lifecycle API */
+void HSSup__INITIALIZE__received
+   (HSSup__context* context)
+{
+   /* User Code Here */
+}
+
+void HSSup__START__received
+   (HSSup__context* context)
+{
+   /* User Code Here */
+}
+
+void HSSup__STOP__received
+   (HSSup__context* context)
+{
+   /* User Code Here */
+}
+
+void HSSup__SHUTDOWN__received
+   (HSSup__context* context)
+{
+   /* User Code Here */
+}
+
+void HSSup__REINITIALIZE__received
+   (HSSup__context* context)
+{
+   /* User Code Here */
+}
+
+void HSSup__exception_notification_handler
+   (HSSup__context* context,
+    const ECOA__exception *exception)
+{
+   /* User Code Here */
+}
+
+void HSSup__lifecycle_notification__HSFuncInst
+   (HSSup__context* context,
+    ECOA__module_states_type previous_state,
+    ECOA__module_states_type new_state)
+{
+   /* User Code Here */
+}
+

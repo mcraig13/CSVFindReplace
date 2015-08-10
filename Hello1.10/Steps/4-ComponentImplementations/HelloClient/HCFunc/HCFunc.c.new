@@ -1,0 +1,48 @@
+/* File HCFunc.c */
+
+#include "HCFunc.h"
+
+/* Runtime lifecycle API */
+void HCFunc__INITIALIZE__received
+   (HCFunc__context* context)
+{
+   /* User Code Here */
+}
+
+void HCFunc__START__received
+   (HCFunc__context* context)
+{
+   /* User Code Here */
+}
+
+void HCFunc__STOP__received
+   (HCFunc__context* context)
+{
+   /* User Code Here */
+}
+
+void HCFunc__SHUTDOWN__received
+   (HCFunc__context* context)
+{
+   /* User Code Here */
+}
+
+void HCFunc__REINITIALIZE__received
+   (HCFunc__context* context)
+{
+   /* User Code Here */
+}
+
+void HCFunc__getchirp__received
+   (HCFunc__context* context,
+    const Local__Array_String_Type* tweet)
+{
+   /* User Code Here */
+}
+
+void HCFunc__trigger__received
+   (HCFunc__context* context)
+{
+   /* User Code Here */
+}
+

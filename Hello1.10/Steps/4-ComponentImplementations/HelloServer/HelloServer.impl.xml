@@ -2,55 +2,55 @@
 <componentImplementation xmlns="http://www.ecoa.technology/implementation-1.0" componentDefinition="HelloServer" >
   <use library="Local" ></use>
 
-  <moduleType name="HSSupType" isSupervisionModule="true">
+  <moduleType name="0xb1" isSupervisionModule="true">
   	<operations>
   	</operations>
   </moduleType>
-  <moduleType name="HSFuncType" >
+  <moduleType name="0xb3" >
   	<operations>
-  	   <eventReceived name="getprod">
-  	   	<input name="tell" type="Local:FixedArray_String_Type"/>
+  	   <eventReceived name="0xd2">
+  	   	<input name="0xd3" type="Local:FixedArray_String_Type"/>
   	   </eventReceived>
-  	   <eventSent name="dochirp">
-  	   	<input name="tweet" type="Local:Array_String_Type"/>
+  	   <eventSent name="0xe1">
+  	   	<input name="0xe3" type="Local:Array_String_Type"/>
   	   </eventSent>
-  	   <requestReceived name="HelloFunction" >
+  	   <requestReceived name="0xf2" >
 	  	   <input name="val" type="ECOA:int32"/>
 	  	   <output name="result" type="ECOA:int32"/>
   	   </requestReceived>
   	</operations>
   </moduleType>
   
-  <moduleImplementation name="HSSup" moduleType="HSSupType" language="C"/>
-  <moduleImplementation name="HSFunc" moduleType="HSFuncType" language="C"/>
+  <moduleImplementation name="0xb2" moduleType="0xb1" language="C"/>
+  <moduleImplementation name="0xb4" moduleType="0xb3" language="C"/>
   
-  <moduleInstance name="HSSupInst" moduleDeadline="1e-3" implementationName="HSSup">
+  <moduleInstance name="0xb5" moduleDeadline="1e-3" implementationName="0xb2">
   </moduleInstance>
-  <moduleInstance name="HSFuncInst" moduleDeadline="1e-3" implementationName="HSFunc">
+  <moduleInstance name="0xb6" moduleDeadline="1e-3" implementationName="0xb4">
   </moduleInstance>
   
   <eventLink>
      <senders>
-   		<service operationName="prod" instanceName="svc_Hello"/>
+   		<service operationName="0xd0" instanceName="0xb7"/>
    </senders>
    <receivers> 
-   		<moduleInstance operationName="getprod" instanceName="HSFuncInst"/>
+   		<moduleInstance operationName="0xd2" instanceName="0xb6"/>
    </receivers>
   </eventLink>  
   <eventLink>
    <senders> 
-      		<moduleInstance operationName="dochirp" instanceName="HSFuncInst"/>
+      		<moduleInstance operationName="0xe1" instanceName="0xb6"/>
    </senders>
    <receivers>
-   		<service operationName="chirp" instanceName="svc_Hello"/>
+   		<service operationName="0xe0" instanceName="0xb7"/>
    </receivers>
   </eventLink> 
   <requestLink>
 	  <clients>
-	  	 <service operationName="helloFunction" instanceName="svc_Hello"/>
+	  	 <service operationName="0xf1" instanceName="0xb7"/>
 	  </clients>
 	  <server>
-		<moduleInstance operationName="HelloFunction" instanceName="HSFuncInst"/>
+		<moduleInstance operationName="0xf2" instanceName="0xb6"/>
 	  </server>
   </requestLink>
 

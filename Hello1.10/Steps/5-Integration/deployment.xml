@@ -5,17 +5,17 @@
 
     <executeOn computingPlatform="C_Platform" computingNode="C_Computer"/>
 
-    <deployedModuleInstance componentName="ClientComponent" moduleInstanceName="HCFuncInst" modulePriority="3"/>
-    <deployedModuleInstance componentName="ClientComponent" moduleInstanceName="HCSupInst" modulePriority="2"/>
-    <deployedTriggerInstance triggerPriority="2" componentName="ClientComponent" triggerInstanceName="HCFuncTrigger"/> 
+    <deployedModuleInstance componentName="ClientComponent" moduleInstanceName="0xa6" modulePriority="3"/>
+    <deployedModuleInstance componentName="ClientComponent" moduleInstanceName="0xa5" modulePriority="2"/>
+    <deployedTriggerInstance triggerPriority="2" componentName="ClientComponent" triggerInstanceName="0xa7"/> 
 
   </protectionDomain>
   <protectionDomain name="S">
 
     <executeOn computingPlatform="S_Platform" computingNode="S_Computer"/>
 
-    <deployedModuleInstance componentName="ServerComponent" moduleInstanceName="HSFuncInst" modulePriority="3"/>
-    <deployedModuleInstance componentName="ServerComponent" moduleInstanceName="HSSupInst" modulePriority="2"/>
+    <deployedModuleInstance componentName="ServerComponent" moduleInstanceName="0xb6" modulePriority="3"/>
+    <deployedModuleInstance componentName="ServerComponent" moduleInstanceName="0xb5" modulePriority="2"/>
 
   </protectionDomain>
   

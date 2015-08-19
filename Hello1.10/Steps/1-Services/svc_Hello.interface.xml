@@ -4,17 +4,17 @@
 
   <operations>
 
-    <requestresponse name="helloFunction">
+    <requestresponse name="0xf1">
       <input name="val" type="ECOA:int32"/>
       <output name="result" type="ECOA:int32"/>
     </requestresponse>
     
-    <event direction="SENT_BY_PROVIDER" name="chirp">
-      <input name="tweet" type="Local:Array_String_Type"/>
+    <event direction="SENT_BY_PROVIDER" name="0xe0">
+      <input name="0xe3" type="Local:Array_String_Type"/>
     </event>
 
-    <event direction="RECEIVED_BY_PROVIDER" name="prod">
-      <input name="tell" type="Local:FixedArray_String_Type"/>
+    <event direction="RECEIVED_BY_PROVIDER" name="0xd0">
+      <input name="0xd3" type="Local:FixedArray_String_Type"/>
     </event>
 
   </operations>

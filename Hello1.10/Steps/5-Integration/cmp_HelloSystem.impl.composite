@@ -7,14 +7,14 @@
     <ecos-sca:instance componentType="HelloClient" version="1.0">
      	      <ecos-sca:implementation name="HelloClient"/>
     </ecos-sca:instance>
-    <csa:reference name="ref_Hello"/>
+    <csa:reference name="0xa8"/>
   </csa:component>
   
   <csa:component name="ServerComponent">
     <ecos-sca:instance componentType="HelloServer" version="1.0">
      	      <ecos-sca:implementation name="HelloServer"/>
     </ecos-sca:instance>
-    <csa:service name="svc_Hello" />
+    <csa:service name="0xb7" />
   </csa:component>
 
   <csa:wire ecos-sca:rank="1" source="ClientComponent/ref_Hello" target="ServerComponent/svc_Hello"/>

@@ -1,66 +1,66 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <componentImplementation xmlns="http://www.ecoa.technology/implementation-1.0" componentDefinition="HelloClient" >
   <use library="Local" ></use>
-  <moduleType name="HCSupType" isSupervisionModule="true">
+  <moduleType name="0xa1" isSupervisionModule="true">
   	<operations>
   	</operations>
   </moduleType>
-  <moduleType name="HCFuncType" >
+  <moduleType name="0xa3" >
   	<operations>
-  	   <eventSent name="doprod">
-  	   	<input name="tell" type="Local:FixedArray_String_Type"/>
+  	   <eventSent name="0xd1">
+  	   	<input name="0xd3" type="Local:FixedArray_String_Type"/>
   	   </eventSent>
-  	   <eventReceived name="getchirp">
-  	   	<input name="tweet" type="Local:Array_String_Type"/>
+  	   <eventReceived name="0xe2">
+  	   	<input name="0xe3" type="Local:Array_String_Type"/>
   	   </eventReceived>
-  	   <requestSent name="callHelloFunction" isSynchronous="true">
+  	   <requestSent name="0xf0" isSynchronous="true">
 	  	   <input name="val" type="ECOA:int32"/>
 	  	   <output name="result" type="ECOA:int32"/>
   	   </requestSent>
-  	   <eventReceived name="trigger"></eventReceived>
+  	   <eventReceived name="0xc0"></eventReceived>
   	</operations>
   </moduleType>
   
-  <moduleImplementation name="HCSup" moduleType="HCSupType" language="C"/>
-  <moduleImplementation name="HCFunc" moduleType="HCFuncType" language="C"/>
+  <moduleImplementation name="0xa2" moduleType="0xa1" language="C"/>
+  <moduleImplementation name="0xa4" moduleType="0xa3" language="C"/>
   
-  <moduleInstance name="HCSupInst" moduleDeadline="1e-3" implementationName="HCSup">
+  <moduleInstance name="0xa5" moduleDeadline="1e-3" implementationName="0xa2">
   </moduleInstance>
-  <moduleInstance name="HCFuncInst" moduleDeadline="1e-3" implementationName="HCFunc">
+  <moduleInstance name="0xa6" moduleDeadline="1e-3" implementationName="0xa4">
   </moduleInstance>
   
-  <triggerInstance name="HCFuncTrigger" moduleDeadline="0"/>
+  <triggerInstance name="0xa7" moduleDeadline="0"/>
   
   <eventLink>
    <senders> 
-   		<moduleInstance operationName="doprod" instanceName="HCFuncInst"/>
+   		<moduleInstance operationName="0xd1" instanceName="0xa6"/>
    </senders>
    <receivers>
-   		<reference operationName="prod" instanceName="ref_Hello"/>
+   		<reference operationName="0xd0" instanceName="0xa8"/>
    </receivers>
   </eventLink>  
   <eventLink>
    <senders> 
-   		<reference operationName="chirp" instanceName="ref_Hello"/>
+   		<reference operationName="0xe0" instanceName="0xa8"/>
    </senders>
    <receivers>
-   		<moduleInstance operationName="getchirp" instanceName="HCFuncInst"/>
+   		<moduleInstance operationName="0xe2" instanceName="0xa6"/>
    </receivers>
   </eventLink> 
   <requestLink>
 	  <clients>
-	  	 <moduleInstance operationName="callHelloFunction" instanceName="HCFuncInst"/>
+	  	 <moduleInstance operationName="0xf0" instanceName="0xa6"/>
 	  </clients>
 	  <server>
-	  	<reference operationName="helloFunction" instanceName="ref_Hello"/>
+	  	<reference operationName="0xf1" instanceName="0xa8"/>
 	  </server>
   </requestLink>
   <eventLink>	  
       <senders>
-         <trigger instanceName="HCFuncTrigger" period="0.2"/>
+         <trigger instanceName="0xa7" period="0.2"/>
       </senders>
 	  <receivers>
-	  	 <moduleInstance operationName="trigger" instanceName="HCFuncInst"/>
+	  	 <moduleInstance operationName="0xc0" instanceName="0xa6"/>
 	  </receivers>
   </eventLink>
   

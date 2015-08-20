@@ -8,7 +8,7 @@
   <ID key="cmp_HelloSystem" value="432065231"/>
   <!--Provided Service IDs are computed from a key string built as follows:-->
   <!--'providerComponentInstanceName/providedServiceName'-->
-  <ID key="ServerComponent/svc_Hello" value="1931337934"/>
+  <ID key="genSvrCmpA1/genSvcA1" value="1931337934"/>
   <ID key="WIUK_Manager/svc_Operator_Displays_Provided" value="138203886"/>
   <ID key="WIUK_Sim/svc_Component_Lifecycle_Provided" value="752246072"/>
   <ID key="WIUK_Sim/svc_Sc_Operator_Controls_Provided" value="1430417074"/>
@@ -57,9 +57,9 @@
   <ID key="EDVRS/svc_Sc_Operator_Controls_Provided" value="684311530"/>
   <!--Service Operation IDs are computed from a key string built as follows:-->
   <!--'sourceComponentInstanceName/sourceReferenceName:targetComponentInstanceName/targetServiceName:operationName'-->
-  <ID key="ClientComponent/ref_Hello:ServerComponent/svc_Hello:chirp" value="512086746"/>
-  <ID key="ClientComponent/ref_Hello:ServerComponent/svc_Hello:prod" value="1875092955"/>
-  <ID key="ClientComponent/ref_Hello:ServerComponent/svc_Hello:helloFunction" value="618335414"/>
+  <ID key="genCliCmpA1/genRefA1:genSvrCmpA1/genSvcA1:chirp" value="512086746"/>
+  <ID key="genCliCmpA1/genRefA1:genSvrCmpA1/genSvcA1:prod" value="1875092955"/>
+  <ID key="genCliCmpA1/genRefA1:genSvrCmpA1/genSvcA1:helloFunction" value="618335414"/>
   <ID key="WIUK_Sim/svc_Operator_Displays_Required:WIUK_Manager/svc_Operator_Displays_Provided:Store_Status_Stn" value="511373020"/>
   <ID key="WIUK_Sim/svc_Operator_Displays_Required:WIUK_Manager/svc_Operator_Displays_Provided:Store_Quantity_Stn" value="1299187773"/>
   <ID key="WIUK_Sim/svc_Operator_Displays_Required:WIUK_Manager/svc_Operator_Displays_Provided:Release_Stns" value="2064563940"/>

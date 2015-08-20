@@ -1,0 +1,23 @@
+<serviceDefinition
+  xmlns="http://www.ecoa.technology/interface-1.0" >
+
+
+  <operations>
+
+    <requestresponse name="helloFunction">
+      <input name="val" type="ECOA:int32"/>
+      <output name="result" type="ECOA:int32"/>
+    </requestresponse>
+    
+    <event direction="SENT_BY_PROVIDER" name="chirp">
+      <input name="tweet" type="Local:Array_String_Type"/>
+    </event>
+
+    <event direction="RECEIVED_BY_PROVIDER" name="prod">
+      <input name="tell" type="Local:FixedArray_String_Type"/>
+    </event>
+
+  </operations>
+
+</serviceDefinition>
+

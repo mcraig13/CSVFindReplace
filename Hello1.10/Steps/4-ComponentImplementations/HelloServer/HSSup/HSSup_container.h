@@ -67,7 +67,7 @@ ECOA__error HSSup_container__get_absolute_system_time
 
 /* Provided Service IDs */;
 typedef ECOA__uint32 HSSup_container__service_id;
-#define HSSup_container__service_id__svc_Hello 0
+#define HSSup_container__service_id__genSvcA1 0
 
 ECOA__error HSSup_container__set_service_availability
    (HSSup__context* context,

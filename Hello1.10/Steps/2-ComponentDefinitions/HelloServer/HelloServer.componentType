@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <componentType xmlns="http://docs.oasis-open.org/ns/opencsa/sca/200912" xmlns:ecoa-sca="http://www.ecoa.technology/sca" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <service name="0xb7">
-    <ecoa-sca:interface syntax="0xb7"/>
+  <service name="genSvcA1">
+    <ecoa-sca:interface syntax="genSvcDefA1"/>
   </service>
 
 </componentType>

@@ -1,18 +1,18 @@
-/* File HSSup.c */
+/* File sysCmpSupModImplB1.c */
 
-#include "HSSup.h"
+#include "sysCmpSupModImplB1.h"
 
 /* Runtime lifecycle API */
 void HSSup__INITIALIZE__received
    (HSSup__context* context)
 {
-	   printf("INIT HSSup\n");
+	   printf("INIT sysCmpSupModImplB1\n");
 }
 
 void HSSup__START__received
    (HSSup__context* context)
 {
-	   printf("START  HSSup\n");
+	   printf("START  sysCmpSupModImplB1\n");
 
 	   HSSup_container__INITIALIZE__HSFuncInst(context);
 }
@@ -59,7 +59,7 @@ void HSSup__lifecycle_notification__HSFuncInst
 						){
 		printf("Up and running\n");
 		//services available...
-		HSSup_container__set_service_availability(context,HSSup_container__service_id__genSvcA1, ECOA__TRUE);
+		HSSup_container__set_service_availability(context,HSSup_container__service_id__svc_Hello, ECOA__TRUE);
 	}
 }
 

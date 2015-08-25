@@ -1,0 +1,100 @@
+/* File sysCmpSupModImplB1_container.c */
+
+#include "sysCmpSupModImplB1_container.h"
+
+/* Logging and fault management services API */
+void sysCmpSupModImplB1_container__log_trace
+   (sysCmpSupModImplB1__context* context, const ECOA__log log)
+{
+}
+
+void sysCmpSupModImplB1_container__log_debug
+   (sysCmpSupModImplB1__context* context, const ECOA__log log)
+{
+}
+
+void sysCmpSupModImplB1_container__log_info
+   (sysCmpSupModImplB1__context* context, const ECOA__log log)
+{
+}
+
+void sysCmpSupModImplB1_container__log_warning
+   (sysCmpSupModImplB1__context* context, const ECOA__log log)
+{
+}
+
+void sysCmpSupModImplB1_container__raise_error
+   (sysCmpSupModImplB1__context* context, const ECOA__log log)
+{
+}
+
+void sysCmpSupModImplB1_container__raise_fatal_error
+   (sysCmpSupModImplB1__context* context, const ECOA__log log)
+{
+}
+
+/* Time services API */
+ECOA__error sysCmpSupModImplB1_container__get_relative_local_time
+   (sysCmpSupModImplB1__context* context, ECOA__hr_time* relative_local_time)
+{
+}
+
+ECOA__error sysCmpSupModImplB1_container__get_UTC_time
+   (sysCmpSupModImplB1__context* context, ECOA__global_time* utc_time)
+{
+}
+
+ECOA__error sysCmpSupModImplB1_container__get_absolute_system_time
+   (sysCmpSupModImplB1__context* context, ECOA__global_time* absolute_system_time)
+{
+}
+
+/* Time resolution services API */
+/*void sysCmpSupModImplB1_container__get_relative_local_time_resolution
+   (sysCmpSupModImplB1__context* context, ECOA__duration* relative_local_time_resolution)
+{
+}*/
+
+/*void sysCmpSupModImplB1_container__get_UTC_time_resolution
+   (sysCmpSupModImplB1__context* context, ECOA__duration* utc_time_resolution)
+{
+}*/
+
+/*void sysCmpSupModImplB1_container__get_absolute_system_time_resolution
+   (sysCmpSupModImplB1__context* context, ECOA__duration* absolute_system_time_resolution)
+{
+}*/
+
+ECOA__error sysCmpSupModImplB1_container__set_service_availability
+   (sysCmpSupModImplB1__context* context,
+    sysCmpSupModImplB1_container__service_id instance,
+    ECOA__boolean8 available)
+{
+}
+
+void sysCmpSupModImplB1_container__get_lifecycle_state__sysCmpModInstB1
+   (sysCmpSupModImplB1__context* context,
+    ECOA__module_states_type* current_state)
+{
+}
+
+ECOA__error sysCmpSupModImplB1_container__STOP__sysCmpModInstB1
+   (sysCmpSupModImplB1__context* context)
+{
+}
+
+ECOA__error sysCmpSupModImplB1_container__START__sysCmpModInstB1
+   (sysCmpSupModImplB1__context* context)
+{
+}
+
+ECOA__error sysCmpSupModImplB1_container__INITIALIZE__sysCmpModInstB1
+   (sysCmpSupModImplB1__context* context)
+{
+}
+
+ECOA__error sysCmpSupModImplB1_container__SHUTDOWN__sysCmpModInstB1
+   (sysCmpSupModImplB1__context* context)
+{
+}
+

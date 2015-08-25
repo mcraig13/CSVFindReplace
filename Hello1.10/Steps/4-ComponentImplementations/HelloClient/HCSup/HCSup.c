@@ -1,19 +1,19 @@
-/* File HCSup.c */
+/* File sysCmpSupModImplA1.c */
 
-#include "HCSup.h"
+#include "sysCmpSupModImplA1.h"
 
 /* Runtime lifecycle API */
 /* Runtime lifecycle API */
 void HCSup__INITIALIZE__received
    (HCSup__context* context)
 {
-	   printf("INIT HCSup\n");
+	   printf("INIT sysCmpSupModImplA1\n");
 }
 
 void HCSup__START__received
    (HCSup__context* context)
 {
-	   printf("START HCSup\n");
+	   printf("START sysCmpSupModImplA1\n");
 
 	   HCSup_container__INITIALIZE__HCFuncInst(context);
 

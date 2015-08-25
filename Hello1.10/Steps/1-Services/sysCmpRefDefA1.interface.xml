@@ -1,0 +1,23 @@
+<serviceDefinition
+  xmlns="http://www.ecoa.technology/interface-1.0" >
+
+
+  <operations>
+
+    <requestresponse name="sysSvcOpRRA1">
+      <input name="sysSvcOpRRIOA1" type="ECOA:int32"/>
+      <output name="sysSvcOpRRIOA2" type="ECOA:int32"/>
+    </requestresponse>
+    
+    <event name="sysSvcOpEvtA1" direction="SENT_BY_PROVIDER">
+      <input name="sysSvcOpEvtIOA1" type="Local:Array_String_Type"/>
+    </event>
+
+    <event name="sysSvcOpEvtA2" direction="RECEIVED_BY_PROVIDER">
+      <input name="sysSvcOpEvtIOA2" type="Local:FixedArray_String_Type"/>
+    </event>
+
+  </operations>
+
+</serviceDefinition>
+

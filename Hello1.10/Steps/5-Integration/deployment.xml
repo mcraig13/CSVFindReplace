@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="Windows-1252" standalone="no"?>
-<deployment xmlns="http://www.ecoa.technology/deployment-1.0" finalAssembly="cmp_HelloSystem" logicalSystem="HelloSystem">
+<deployment xmlns="http://www.ecoa.technology/deployment-1.0" finalAssembly="compSysA1" logicalSystem="sysA1">
 
   <protectionDomain name="C">
 
     <executeOn computingPlatform="C_Platform" computingNode="C_Computer"/>
 
-    <deployedModuleInstance componentName="genCliCmpA1" moduleInstanceName="HCFuncInst" modulePriority="3"/>
-    <deployedModuleInstance componentName="genCliCmpA1" moduleInstanceName="HCSupInst" modulePriority="2"/>
-    <deployedTriggerInstance triggerPriority="2" componentName="genCliCmpA1" triggerInstanceName="HCFuncTrigger"/> 
+    <deployedModuleInstance componentName="sysCmpA1" moduleInstanceName="sysCmpModInstA1" modulePriority="3"/>
+    <deployedModuleInstance componentName="sysCmpA1" moduleInstanceName="sysCmpSupModInstA1" modulePriority="2"/>
+    <deployedTriggerInstance componentName="sysCmpA1" triggerInstanceName="sysCmpTrigInstA1" triggerPriority="2"/> 
 
   </protectionDomain>
   <protectionDomain name="S">
 
     <executeOn computingPlatform="S_Platform" computingNode="S_Computer"/>
 
-    <deployedModuleInstance componentName="genSvrCmpA1" moduleInstanceName="HSFuncInst" modulePriority="3"/>
-    <deployedModuleInstance componentName="genSvrCmpA1" moduleInstanceName="HSSupInst" modulePriority="2"/>
+    <deployedModuleInstance componentName="sysCmpB1" moduleInstanceName="sysCmpModInstB1" modulePriority="3"/>
+    <deployedModuleInstance componentName="sysCmpB1" moduleInstanceName="sysCmpSupModInstB1" modulePriority="2"/>
 
   </protectionDomain>
   

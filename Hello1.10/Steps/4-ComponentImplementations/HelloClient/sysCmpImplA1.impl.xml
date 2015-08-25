@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<componentImplementation xmlns="http://www.ecoa.technology/implementation-1.0" componentDefinition="sysCmpInstA1" >
+  <use library="Local" ></use>
+  <moduleType name="sysCmpSupModA1" isSupervisionModule="true">
+  	<operations>
+  	</operations>
+  </moduleType>
+  <moduleType name="sysCmpModA1" >
+  	<operations>
+  	   <eventSent name="sysCmpModOpEvtA1">
+  	   	<input name="sysSvcOpEvtIOA2" type="Local:FixedArray_String_Type"/>
+  	   </eventSent>
+  	   <eventReceived name="sysCmpModOpEvtA2">
+  	   	<input name="sysSvcOpEvtIOA1" type="Local:Array_String_Type"/>
+  	   </eventReceived>
+  	   <requestSent name="sysCmpModOpRqA1" isSynchronous="true">
+	  	   <input name="sysSvcOpRRIOA1" type="ECOA:int32"/>
+	  	   <output name="sysSvcOpRRIOA2" type="ECOA:int32"/>
+  	   </requestSent>
+  	   <eventReceived name="trigger"></eventReceived>
+  	</operations>
+  </moduleType>
+  
+  <moduleImplementation name="sysCmpSupModImplA1" moduleType="sysCmpSupModA1" language="C"/>
+  <moduleImplementation name="sysCmpModImplA1" moduleType="sysCmpModA1" language="C"/>
+  
+  <moduleInstance name="sysCmpSupModInstA1" moduleDeadline="1e-3" implementationName="sysCmpSupModImplA1">
+  </moduleInstance>
+  <moduleInstance name="sysCmpModInstA1" moduleDeadline="1e-3" implementationName="sysCmpModImplA1">
+  </moduleInstance>
+  
+  <triggerInstance name="sysCmpTrigInstA1" moduleDeadline="0"/>
+  
+  <eventLink>
+   <senders> 
+   		<moduleInstance operationName="sysCmpModOpEvtA1" instanceName="sysCmpModInstA1"/>
+   </senders>
+   <receivers>
+   		<reference operationName="sysSvcOpEvtA2" instanceName="sysCmpRefA1"/>
+   </receivers>
+  </eventLink>  
+  <eventLink>
+   <senders> 
+   		<reference operationName="sysSvcOpEvtA1" instanceName="sysCmpRefA1"/>
+   </senders>
+   <receivers>
+   		<moduleInstance operationName="sysCmpModOpEvtA2" instanceName="sysCmpModInstA1"/>
+   </receivers>
+  </eventLink> 
+  <requestLink>
+	  <clients>
+	  	 <moduleInstance operationName="sysCmpModOpRqA1" instanceName="sysCmpModInstA1"/>
+	  </clients>
+	  <server>
+	  	<reference operationName="sysSvcOpRRA1" instanceName="sysCmpRefA1"/>
+	  </server>
+  </requestLink>
+  <eventLink>	  
+      <senders>
+         <trigger instanceName="sysCmpTrigInstA1" period="0.2"/>
+      </senders>
+	  <receivers>
+	  	 <moduleInstance operationName="trigger" instanceName="sysCmpModInstA1"/>
+	  </receivers>
+  </eventLink>
+  
+</componentImplementation>
+

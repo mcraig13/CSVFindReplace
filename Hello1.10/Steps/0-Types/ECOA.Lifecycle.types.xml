@@ -4,7 +4,7 @@
 	<types>
 	
 		<!-- ECOA.Lifecycle:component_states_type -->
-		<enum name="cmpStTYP" type="int32">
+		<enum name="component_states_type" type="int32">
 			<value name="IDLE" /> <!-- default value -->
 			<value name="INITIALIZING" /> <!-- transient state -->
 			<value name="STOPPED" />
@@ -16,7 +16,7 @@
 		</enum>
 
 		<!-- ECOA.Lifecycle:module_states_type -->
-		<enum name="modStTYP" type="int32">
+		<enum name="module_states_type" type="int32">
 			<value name="IDLE" />        <!-- default value -->
 			<value name="READY" />
 			<value name="RUNNING" />

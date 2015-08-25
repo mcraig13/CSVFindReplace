@@ -1,8 +1,8 @@
 /obj/
 /HCFunc_container.c.test
 /HCFunc_container.h
-/HCFunc.a
-/HCFunc.c.new
-/HCFunc.h
+/sysCmpModImplA1.a
+/sysCmpModImplA1.c.new
+/sysCmpModImplA1.h
 /Makefile
 /HCFunc_user_context.h.new

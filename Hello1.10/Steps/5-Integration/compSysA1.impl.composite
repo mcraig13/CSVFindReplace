@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<csa:composite xmlns:csa="http://docs.oasis-open.org/ns/opencsa/sca/200912" xmlns:ecos-sca="http://www.ecoa.technology/sca"
+  name="compSysA1" targetNamespace="AssemblySchema">
+
+
+  <csa:component name="sysCmpA1">
+    <ecos-sca:instance componentType="sysCmpInstA1" version="1.0">
+     	      <ecos-sca:implementation name="sysCmpImplA1"/>
+    </ecos-sca:instance>
+    <csa:reference name="sysCmpRefA1"/>
+  </csa:component>
+  
+  <csa:component name="sysCmpB1">
+    <ecos-sca:instance componentType="sysCmpInstB1" version="1.0">
+     	      <ecos-sca:implementation name="sysCmpImplB1"/>
+    </ecos-sca:instance>
+    <csa:service name="sysCmpSvcB1" />
+  </csa:component>
+
+  <csa:wire ecos-sca:rank="1" source="sysCmpA1/sysCmpRefA1" target="sysCmpB1/sysCmpSvcA1"/>
+
+</csa:composite>
+

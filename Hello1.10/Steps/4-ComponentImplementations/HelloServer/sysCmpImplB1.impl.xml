@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<componentImplementation xmlns="http://www.ecoa.technology/implementation-1.0" componentDefinition="sysCmpInstB1" >
+  <use library="Local" ></use>
+
+  <moduleType name="sysCmpSupModB1" isSupervisionModule="true">
+  	<operations>
+  	</operations>
+  </moduleType>
+  <moduleType name="sysCmpModB1" >
+  	<operations>
+  	   <eventReceived name="sysCmpModOpEvtB1">
+  	   	<input name="sysSvcOpEvtIOA2" type="Local:FixedArray_String_Type"/>
+  	   </eventReceived>
+  	   <eventSent name="sysCmpModOpEvtB2">
+  	   	<input name="sysSvcOpEvtIOA1" type="Local:Array_String_Type"/>
+  	   </eventSent>
+  	   <requestReceived name="sysCmpModOpRqB1" >
+	  	   <input name="sysSvcOpRRIOA1" type="ECOA:int32"/>
+	  	   <output name="sysSvcOpRRIOA2" type="ECOA:int32"/>
+  	   </requestReceived>
+  	</operations>
+  </moduleType>
+  
+  <moduleImplementation name="sysCmpSupModImplB1" moduleType="sysCmpSupModB1" language="C"/>
+  <moduleImplementation name="sysCmpModImplB1" moduleType="sysCmpModB1" language="C"/>
+  
+  <moduleInstance name="sysCmpSupModInstB1" moduleDeadline="1e-3" implementationName="sysCmpSupModImplB1">
+  </moduleInstance>
+  <moduleInstance name="sysCmpModInstB1" moduleDeadline="1e-3" implementationName="sysCmpModImplB1">
+  </moduleInstance>
+  
+  <eventLink>
+     <senders>
+   		<service operationName="sysSvcOpEvtA2" instanceName="sysCmpSvcA1"/>
+   </senders>
+   <receivers> 
+   		<moduleInstance operationName="sysCmpModOpEvtB1" instanceName="sysCmpModInstB1"/>
+   </receivers>
+  </eventLink>  
+  <eventLink>
+   <senders> 
+      		<moduleInstance operationName="sysCmpModOpEvtB2" instanceName="sysCmpModInstB1"/>
+   </senders>
+   <receivers>
+   		<service operationName="sysSvcOpEvtA1" instanceName="sysCmpSvcA1"/>
+   </receivers>
+  </eventLink> 
+  <requestLink>
+	  <clients>
+	  	 <service operationName="sysSvcOpRRA1" instanceName="sysCmpSvcA1"/>
+	  </clients>
+	  <server>
+		<moduleInstance operationName="sysCmpModOpRqB1" instanceName="sysCmpModInstB1"/>
+	  </server>
+  </requestLink>
+
+  
+</componentImplementation>
+

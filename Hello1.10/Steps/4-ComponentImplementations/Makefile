@@ -1,17 +1,17 @@
 # Generated Makefile for Component Implementations
 
-TARGETS=HelloServer HelloClient 
+TARGETS=sysCmpImplB1 sysCmpImplA1 
 default: $(TARGETS)
 
 clean:
-	cd HelloServer ; make -f Makefile clean
-	cd HelloClient ; make -f Makefile clean
+	cd sysCmpImplB1 ; make -f Makefile clean
+	cd sysCmpImplA1 ; make -f Makefile clean
 
-HelloServer: dummy
-	cd HelloServer ; make -f Makefile
+sysCmpImplB1: dummy
+	cd sysCmpImplB1 ; make -f Makefile
 
-HelloClient: dummy
-	cd HelloClient ; make -f Makefile
+sysCmpImplA1: dummy
+	cd sysCmpImplA1 ; make -f Makefile
 
 dummy:
 	true
